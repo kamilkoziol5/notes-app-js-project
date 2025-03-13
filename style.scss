@@ -1,0 +1,124 @@
+@import "variables";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Open Sans", sans-serif;
+}
+
+body {
+	background: linear-gradient(
+		45deg,
+		$bgcolor1 20%,
+		$bgcolor2 70%,
+		$bgcolor3 100%
+	);
+}
+
+.container {
+	height: 100dvh;
+	width: 100%;
+	padding: 4% 10%;
+
+	h1 {
+		color: $text-color;
+		font-size: 40px;
+		display: flex;
+		gap: 5px;
+		align-items: center;
+		font-weight: 800;
+
+		img {
+			width: 80px;
+			height: auto;
+		}
+
+		span {
+			text-decoration: underline;
+			color: var(--accent-color);
+			text-shadow: 2px 2px 0 $text-color;
+		}
+	}
+
+	button {
+		padding: 20px 45px;
+		background-color: $accent-color;
+		border: 2px solid transparent;
+		outline: none;
+		margin-top: 50px;
+		font-size: 18px;
+		font-weight: 800;
+		border-radius: 50px;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		color: $text-color;
+		transition: 300ms ease;
+
+		svg {
+			width: 30px;
+			height: auto;
+			fill: $text-color;
+			transition: 300ms ease;
+		}
+
+		&:focus,
+		&:hover {
+			border: 2px solid $text-color;
+			transform: translateY(-2px);
+			box-shadow: 0 2px 0 $text-color;
+			color: #141414;
+
+			svg {
+				fill: #141414;
+				transform: scale(1.1) translateX(-5px);
+			}
+		}
+
+		&:active {
+			background-color: #e79600;
+			transform: scale(0.98);
+		}
+	}
+
+	.input-box {
+		margin-top: 50px;
+		position: relative;
+		width: 100%;
+		max-width: 700px;
+		min-height: 20vh;
+		background-color: $white-color;
+		color: var(--text-color);
+		font-size: 16px;
+		font-weight: 400;
+		padding: 20px;
+		outline: none;
+		border-radius: 12px;
+		border: 1px solid #5e5e5e;
+		box-shadow: 2px 2px 0 $text-color;
+		transition: 300ms ease;
+
+		&:hover,
+		&:focus {
+			border-color: $text-color;
+		}
+
+		svg {
+			width: 30px;
+			height: auto;
+			position: absolute;
+			bottom: 15px;
+			right: 15px;
+			cursor: pointer;
+			fill: #9b9b9b;
+			transition: 300ms ease;
+
+			&:hover,
+			&:focus {
+				fill: #5a5a5a;
+			}
+		}
+	}
+}

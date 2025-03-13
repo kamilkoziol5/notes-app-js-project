@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background: linear-gradient(45deg, rgb(255, 240, 154) 20%, rgb(255, 242, 122) 70%, rgb(251, 255, 189) 100%);
+}
+
+.container {
+  height: 100dvh;
+  width: 100%;
+  padding: 4% 10%;
+}
+.container h1 {
+  color: #1d1d1d;
+  font-size: 40px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-weight: 800;
+}
+.container h1 img {
+  width: 80px;
+  height: auto;
+}
+.container h1 span {
+  text-decoration: underline;
+  color: var(--accent-color);
+  text-shadow: 2px 2px 0 #1d1d1d;
+}
+.container button {
+  padding: 20px 45px;
+  background-color: #f59f00;
+  border: 2px solid transparent;
+  outline: none;
+  margin-top: 50px;
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1d1d1d;
+  transition: 300ms ease;
+}
+.container button svg {
+  width: 30px;
+  height: auto;
+  fill: #1d1d1d;
+  transition: 300ms ease;
+}
+.container button:focus, .container button:hover {
+  border: 2px solid #1d1d1d;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 0 #1d1d1d;
+  color: #141414;
+}
+.container button:focus svg, .container button:hover svg {
+  fill: #141414;
+  transform: scale(1.1) translateX(-5px);
+}
+.container button:active {
+  background-color: #e79600;
+  transform: scale(0.98);
+}
+.container .input-box {
+  margin-top: 50px;
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  min-height: 20vh;
+  background-color: #ebebeb;
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 20px;
+  outline: none;
+  border-radius: 12px;
+  border: 1px solid #5e5e5e;
+  box-shadow: 2px 2px 0 #1d1d1d;
+  transition: 300ms ease;
+}
+.container .input-box:hover, .container .input-box:focus {
+  border-color: #1d1d1d;
+}
+.container .input-box svg {
+  width: 30px;
+  height: auto;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+  fill: #9b9b9b;
+  transition: 300ms ease;
+}
+.container .input-box svg:hover, .container .input-box svg:focus {
+  fill: #5a5a5a;
+}/*# sourceMappingURL=style.css.map */
