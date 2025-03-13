@@ -46,7 +46,7 @@ body {
 		background-color: $accent-color;
 		border: 2px solid transparent;
 		outline: none;
-		margin-top: 50px;
+		margin: 50px 0;
 		font-size: 18px;
 		font-weight: 800;
 		border-radius: 50px;
@@ -86,7 +86,6 @@ body {
 	.input-box {
 		position: relative;
 		width: 100%;
-		max-width: 700px;
 		min-height: 20vh;
 		background-color: $white-color;
 		color: var(--text-color);
@@ -117,17 +116,20 @@ body {
 				transform: scale(1.15);
 			}
 		}
-
-		&:nth-child(2),
-		&:nth-child(1) {
-			margin-top: 50px;
-		}
 	}
 
 	.notes-container {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 		gap: 20px;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+@media (max-width: 1274px) {
+	.container .notes-container {
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		width: 100%;
 	}
 }

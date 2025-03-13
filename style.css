@@ -36,7 +36,7 @@ body {
   background-color: #f59f00;
   border: 2px solid transparent;
   outline: none;
-  margin-top: 50px;
+  margin: 50px 0;
   font-size: 18px;
   font-weight: 800;
   border-radius: 50px;
@@ -70,7 +70,6 @@ body {
 .container .input-box {
   position: relative;
   width: 100%;
-  max-width: 700px;
   min-height: 20vh;
   background-color: #ebebeb;
   color: var(--text-color);
@@ -98,12 +97,17 @@ body {
 .container .input-box img:hover {
   transform: scale(1.15);
 }
-.container .input-box:nth-child(2), .container .input-box:nth-child(1) {
-  margin-top: 50px;
-}
 .container .notes-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1274px) {
+  .container .notes-container {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

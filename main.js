@@ -40,3 +40,4 @@ function addEventListenersToNotes() {
 		nt.addEventListener("keyup", updateStorage)
 	})
 }
+
