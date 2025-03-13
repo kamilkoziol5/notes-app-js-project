@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-	height: 100dvh;
+	min-height: 100dvh;
 	width: 100%;
 	padding: 4% 10%;
 
@@ -36,7 +36,7 @@ body {
 
 		span {
 			text-decoration: underline;
-			color: var(--accent-color);
+			color: $accent-color;
 			text-shadow: 2px 2px 0 $text-color;
 		}
 	}
@@ -84,7 +84,6 @@ body {
 	}
 
 	.input-box {
-		margin-top: 50px;
 		position: relative;
 		width: 100%;
 		max-width: 700px;
@@ -105,20 +104,30 @@ body {
 			border-color: $text-color;
 		}
 
-		svg {
+		img {
 			width: 30px;
 			height: auto;
 			position: absolute;
 			bottom: 15px;
 			right: 15px;
 			cursor: pointer;
-			fill: #9b9b9b;
-			transition: 300ms ease;
+			transition: 200ms ease;
 
-			&:hover,
-			&:focus {
-				fill: #5a5a5a;
+			&:hover {
+				transform: scale(1.15);
 			}
 		}
+
+		&:nth-child(2),
+		&:nth-child(1) {
+			margin-top: 50px;
+		}
+	}
+
+	.notes-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 20px;
 	}
 }

@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  height: 100dvh;
+  min-height: 100dvh;
   width: 100%;
   padding: 4% 10%;
 }
@@ -28,7 +28,7 @@ body {
 }
 .container h1 span {
   text-decoration: underline;
-  color: var(--accent-color);
+  color: #f59f00;
   text-shadow: 2px 2px 0 #1d1d1d;
 }
 .container button {
@@ -68,7 +68,6 @@ body {
   transform: scale(0.98);
 }
 .container .input-box {
-  margin-top: 50px;
   position: relative;
   width: 100%;
   max-width: 700px;
@@ -87,16 +86,24 @@ body {
 .container .input-box:hover, .container .input-box:focus {
   border-color: #1d1d1d;
 }
-.container .input-box svg {
+.container .input-box img {
   width: 30px;
   height: auto;
   position: absolute;
   bottom: 15px;
   right: 15px;
   cursor: pointer;
-  fill: #9b9b9b;
-  transition: 300ms ease;
+  transition: 200ms ease;
 }
-.container .input-box svg:hover, .container .input-box svg:focus {
-  fill: #5a5a5a;
+.container .input-box img:hover {
+  transform: scale(1.15);
+}
+.container .input-box:nth-child(2), .container .input-box:nth-child(1) {
+  margin-top: 50px;
+}
+.container .notes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }/*# sourceMappingURL=style.css.map */
