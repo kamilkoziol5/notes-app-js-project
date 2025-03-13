@@ -71,6 +71,7 @@ body {
   position: relative;
   width: 100%;
   min-height: 20vh;
+  max-width: 750px;
   background-color: #ebebeb;
   color: var(--text-color);
   font-size: 16px;
