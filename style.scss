@@ -17,24 +17,30 @@ body {
 }
 
 .container {
-	min-height: 100dvh;
+	height: 100dvh;
 	width: 100%;
 	padding: 4% 10%;
 
-	h1 {
-		color: $text-color;
-		font-size: 40px;
+	.title {
 		display: flex;
-		gap: 5px;
 		align-items: center;
-		font-weight: 800;
-
+		gap: 10px;
 		img {
 			width: 80px;
 			height: auto;
 		}
+		h1 {
+			color: $text-color;
+			font-size: clamp(28px, 5vw, 40px);
+			display: flex;
+			gap: 5px;
+			align-items: center;
+			font-weight: 800;
+		}
 
 		span {
+			font-size: clamp(28px, 5vw, 40px);
+			font-weight: 700;
 			text-decoration: underline;
 			color: $accent-color;
 			text-shadow: 2px 2px 0 $text-color;
@@ -132,5 +138,25 @@ body {
 	.container .notes-container {
 		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 		width: 100%;
+	}
+}
+
+@media (max-width: 620px) {
+	.container {
+		align-items: center;
+		justify-content: center;
+
+		.title {
+			flex-direction: column;
+			gap: 0;
+			text-align: center;
+		}
+
+		button {
+			margin: 50px auto;
+			margin-top: 20px;
+			padding: 15px 35px;
+			font-size: 16px;
+		}
 	}
 }
